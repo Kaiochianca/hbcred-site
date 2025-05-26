@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hb Cred - Antecipe seu FGTS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      background: url('https://i.imgur.com/07aKhYx.jpg') no-repeat center center;
+      background-size: cover;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      z-index: 10;
+      background: white;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .banner-text h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .banner-text p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+
+    .form-container {
+      max-width: 400px;
+      background: #ffffff;
+      margin: -40px auto 0;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px auto;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img class="logo" src="hb_cred_landig_page.png" alt="Hb Cred Logo">
+    <div class="banner-text">
+      <h1>Antecipe seu FGTS</h1>
+      <p>Dinheiro na conta em poucas horas.</p>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h2>Informe seu WhatsApp para contato:</h2>
+    <form onsubmit="enviarParaWhatsApp(event)">
+      <label for="whatsapp">WhatsApp</label>
+      <input type="text" id="whatsapp" name="whatsapp" placeholder="(XX) XXXXX-XXXX" required>
+      <button type="submit">Continuar</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    © 2025 Hb Cred - Soluções Financeiras
+  </div>
+![hb_cred_landig_page](https://github.com/user-attachments/assets/7add2b6a-7ad9-4e53-9602-5ee923e897e5)
+
+      <script>
+    function enviarParaWhatsApp(event) {
+      event.preventDefault();
+      const numeroCliente = document.getElementById('whatsapp').value;
+      const numeroEmpresa = '5511968354741'; // 5511968354741
+      const mensagem = `Olá, quero antecipar meu FGTS. Meu número é: ${numeroCliente}`;
+      const url = `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
